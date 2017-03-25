@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="運動計時器" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8uz-la-X0l">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="1" green="0.27851175639999998" blue="0.64264155329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bUg-Ck-FnT">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="運動計時器" id="R7R-y2-P2q"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YG3-Go-61F">
+                                <rect key="frame" x="67.5" y="69" width="241.5" height="107.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="90"/>
+                                <color key="textColor" red="0.95337258489999999" green="1" blue="0.98079821680000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9G-hd-Vc5">
+                                <rect key="frame" x="0.0" y="387" width="375" height="216"/>
+                            </pickerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V5G-32-Woh">
+                                <rect key="frame" x="67.5" y="228" width="240" height="53"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gJ-C1-NUl">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="53"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <state key="normal" title="開始">
+                                            <color key="titleColor" red="0.98169982320000004" green="1" blue="0.95748828460000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IPG-dY-NL7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2c-uj-kBx">
+                                        <rect key="frame" x="120" y="0.0" width="120" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="KEu-ez-Xow"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <state key="normal" title="重置">
+                                            <color key="titleColor" red="0.98169982320000004" green="1" blue="0.95748828460000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resetTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vJF-lq-tGK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="DUK-L9-nn5"/>
+                                    <constraint firstItem="9gJ-C1-NUl" firstAttribute="top" secondItem="V5G-32-Woh" secondAttribute="top" id="FGm-Bz-RmP"/>
+                                    <constraint firstItem="9gJ-C1-NUl" firstAttribute="leading" secondItem="V5G-32-Woh" secondAttribute="leading" id="cry-KJ-30A"/>
+                                    <constraint firstItem="x2c-uj-kBx" firstAttribute="top" secondItem="V5G-32-Woh" secondAttribute="top" id="hgB-so-G8p"/>
+                                    <constraint firstAttribute="width" constant="240" id="o5F-Ax-VeJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="x2c-uj-kBx" secondAttribute="trailing" id="vIj-Pj-DU9"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="a9G-hd-Vc5" firstAttribute="top" secondItem="8uz-la-X0l" secondAttribute="bottom" constant="-280" id="2eV-Zy-mD8"/>
+                            <constraint firstItem="bUg-Ck-FnT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4VJ-dw-cl2"/>
+                            <constraint firstAttribute="trailing" secondItem="bUg-Ck-FnT" secondAttribute="trailing" id="50e-cL-F6H"/>
+                            <constraint firstItem="8uz-la-X0l" firstAttribute="leading" secondItem="a9G-hd-Vc5" secondAttribute="leading" id="ASf-jJ-CEK"/>
+                            <constraint firstItem="YG3-Go-61F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hiu-p4-5Te"/>
+                            <constraint firstItem="8uz-la-X0l" firstAttribute="top" secondItem="bUg-Ck-FnT" secondAttribute="bottom" constant="-64" id="I8s-F0-sFu"/>
+                            <constraint firstItem="YG3-Go-61F" firstAttribute="top" secondItem="bUg-Ck-FnT" secondAttribute="bottom" constant="5" id="K36-fh-8QO"/>
+                            <constraint firstItem="a9G-hd-Vc5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KNo-3y-OIN"/>
+                            <constraint firstItem="8uz-la-X0l" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Wx4-ca-Qbu"/>
+                            <constraint firstItem="V5G-32-Woh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b1Z-Sq-xJp"/>
+                            <constraint firstItem="V5G-32-Woh" firstAttribute="top" secondItem="YG3-Go-61F" secondAttribute="bottom" constant="51.5" id="dUk-5W-nqr"/>
+                            <constraint firstItem="8uz-la-X0l" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iMd-o2-S1r"/>
+                            <constraint firstItem="8uz-la-X0l" firstAttribute="leading" secondItem="bUg-Ck-FnT" secondAttribute="leading" id="kJt-wZ-FIh"/>
+                            <constraint firstItem="bUg-Ck-FnT" firstAttribute="leading" secondItem="8uz-la-X0l" secondAttribute="trailing" constant="-375" id="kPc-j8-VyH"/>
+                            <constraint firstItem="bUg-Ck-FnT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ysC-gv-NWd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pickObj" destination="a9G-hd-Vc5" id="JAa-f4-XNh"/>
+                        <outlet property="timeLabel" destination="YG3-Go-61F" id="0Jv-oi-Ytb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
